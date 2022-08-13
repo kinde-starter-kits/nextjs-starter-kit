@@ -1,11 +1,42 @@
-# NextJS starter kit
+# Kinde Starter Kit - NextJS
 
 This is a NextJS template with [KindeAuth](https://kinde.com/docs/sdks/nextjs-sdk).
 
-## How to use this starter kit
+## Register an account on Kinde
 
-1. Clone this git repo into a project folder on your computer
-2. Configure your [environment variables](https://kinde.com/docs/sdks/nextjs-sdk)
-3. Get the app running on `http:localhost:3000` with `npm run dev`
-4. Configure [Kinde settings](https://kinde.com/docs/sdks/nextjs-sdk)
-5. Start authenticating 🚀
+To get started set up an account on [Kinde](https://app.kinde.com/register).
+
+## Setup your local environment
+
+Clone this repo and install dependencies by running `npm i`
+
+Make a copy of `.env_sample` and name it simply `.env`. Set the following variables with the details from the Kinde `App Keys` page
+
+> KINDE_ISSUER_URL - The token host value
+>
+> KINDE_CLIENT_SECRET - The client secret
+
+e.g
+
+```
+KINDE_ISSUER_URL=https://your_kinde_subdomain.kinde.com
+KINDE_CLIENT_SECRET=some5ecretFromappKey5pag3
+```
+
+## Set your Callback and Logout URLs
+
+Your user will be redirected to Kinde to authenticate. After they have logged in or registered they will be redirected back to your NextJS application.
+
+You need to specify in Kinde which url you would like your user to be redirected to in order to authenticate your app.
+
+On the App Keys page set ` Allowed callback URLs` to `http://localhost:3000/api/auth/kinde_callback`
+
+> Important! This is required for your users to successfully log in to your app.
+
+You will also need to set the url they will be redirected to upon logout. Set the ` Allowed logout redirect URLs` to http://localhost:3000.
+
+## Start the app
+
+Run `npm start` and navigate to `http://localhost:3000`.
+
+Click on `Sign up` and register your first user for your business! 🚀
