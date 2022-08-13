@@ -33,10 +33,14 @@ On the App Keys page set ` Allowed callback URLs` to `http://localhost:3000/api/
 
 > Important! This is required for your users to successfully log in to your app.
 
-You will also need to set the url they will be redirected to upon logout. Set the ` Allowed logout redirect URLs` to http://localhost:3000.
+You will also need to set the url they will be redirected to upon logout. Set the `Allowed logout redirect URLs` to http://localhost:3000.
 
 ## Start the app
 
 Run `npm start` and navigate to `http://localhost:3000`.
 
-Click on `Sign up` and register your first user for your business! 🚀
+Click on `Sign up` and register your first user for your business!
+
+## View users in Kinde
+
+If you navigate to the "Users" page within Kinde you will see your newly registered user there. 🚀
