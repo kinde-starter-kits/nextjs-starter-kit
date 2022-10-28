@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export const LoggedOut = () => {
   return (
     <>
@@ -5,12 +7,12 @@ export const LoggedOut = () => {
         <nav className="nav container">
           <h1 className="text-display-3">KindeAuth</h1>
           <div>
-            <a className="btn btn-ghost sign-in-btn" href="/api/auth/login">
+            <Link className="btn btn-ghost sign-in-btn" href="/api/auth/login">
               Sign in
-            </a>
-            <a className="btn btn-dark" href="/api/auth/register">
+            </Link>
+            <Link className="btn btn-dark" href="/api/auth/register">
               Sign up
-            </a>
+            </Link>
           </div>
         </nav>
       </header>
@@ -23,14 +25,14 @@ export const LoggedOut = () => {
             </p>
             <p className="text-body-1 hero-tagline">Configure your app</p>
 
-            <a
+            <Link
               href="https://kinde.com/docs/sdks/nextjs-sdk"
               target="_blank"
               rel="noreferrer"
               className="btn btn-light btn-big"
             >
               Go to docs
-            </a>
+            </Link>
           </div>
         </div>
       </main>
@@ -40,9 +42,9 @@ export const LoggedOut = () => {
           <strong className="text-heading-2">KindeAuth</strong>
           <p className="footer-tagline text-body-3">
             Visit our{" "}
-            <a className="link" href="https://kinde.com/docs">
+            <Link className="link" href="https://kinde.com/docs">
               help center
-            </a>
+            </Link>
           </p>
 
           <small className="text-subtle">
