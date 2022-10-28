@@ -1,4 +1,5 @@
 import { useKindeAuth } from "@kinde-oss/kinde-auth-nextjs";
+import Link from "next/link";
 
 export const LoggedIn = () => {
   const { user } = useKindeAuth();
@@ -17,9 +18,9 @@ export const LoggedIn = () => {
               <p className="text-heading-2">
                 {user.first_name} {user.last_name}
               </p>
-              <a className="text-subtle" href="/api/auth/logout">
+              <Link className="text-subtle" href="/api/auth/logout">
                 Sign out
-              </a>
+              </Link>
             </div>
           </div>
         </nav>
@@ -46,9 +47,9 @@ export const LoggedIn = () => {
           <strong className="text-heading-2">KindeAuth</strong>
           <p className="footer-tagline text-body-3">
             Visit our{" "}
-            <a className="link" href="https://kinde.com/docs">
+            <Link className="link" href="https://kinde.com/docs">
               help center
-            </a>
+            </Link>
           </p>
 
           <small className="text-subtle">
