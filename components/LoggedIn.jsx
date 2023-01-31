@@ -10,12 +10,12 @@ export const LoggedIn = () => {
           <h1 className="text-display-3">KindeAuth</h1>
           <div className="profile-blob">
             <div className="avatar">
-              {user.given_name[0]}
-              {user.given_name[1]}
+              {user?.given_name?.[0]}
+              {user?.family_name?.[1]}
             </div>
             <div>
               <p className="text-heading-2">
-                {user.given_name} {user.last_name}
+                {user?.given_name} {user?.family_name}
               </p>
               <Link className="text-subtle" href="/api/auth/logout">
                 Sign out
