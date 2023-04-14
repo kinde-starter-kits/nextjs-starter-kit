@@ -3,6 +3,13 @@ import Link from "next/link";
 
 export const LoggedIn = () => {
   const { user } = useKindeAuth();
+
+  const handleGetAccessToken = async () => {
+    const res = await fetch("/api/getAccessToken");
+    const { token } = await res.json();
+    alert(JSON.stringify(token, null, 2));
+  };
+
   return (
     <>
       <header>
@@ -37,6 +44,7 @@ export const LoggedIn = () => {
           </div>
           <section className="next-steps-section">
             <h2 className="text-heading-1">Next steps for you</h2>
+            <button onClick={handleGetAccessToken}>Get access token</button>
           </section>
         </div>
       </main>
