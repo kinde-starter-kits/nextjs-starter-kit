@@ -19,8 +19,8 @@ Make a copy of `.env_sample` and name it simply `.env`. Set the following variab
 e.g
 
 ```
-KINDE_ISSUER_URL=https://your_kinde_subdomain.kinde.com
-KINDE_CLIENT_SECRET=some5ecretFromappKey5pag3
+KINDE_ISSUER_URL=https://<your_subdomain>.kinde.com
+KINDE_CLIENT_SECRET=<your_client_secret>
 ```
 
 ## Set your Callback and Logout URLs
