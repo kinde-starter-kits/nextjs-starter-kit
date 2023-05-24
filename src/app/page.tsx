@@ -1,16 +1,37 @@
+"use client";
+import { useKindeAuth } from "@kinde-oss/kinde-auth-nextjs";
 import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
+import Footer from "./components/Footer/Footer";
 
-export const LoggedOut = () => {
+export default function Home() {
+  const router = useRouter();
+  const pathname = usePathname();
+  const { isLoading, isAuthenticated, user, getToken } = useKindeAuth();
+
+  if (!isLoading && !isAuthenticated && pathname != "/") {
+    console.log("sending home");
+    return router.push("/");
+  }
+
   return (
     <>
       <header>
         <nav className="nav container">
           <h1 className="text-display-3">KindeAuth</h1>
           <div>
-            <Link className="btn btn-ghost sign-in-btn" href="/api/auth/login">
+            <Link
+              prefetch={false}
+              className="btn btn-ghost sign-in-btn"
+              href={{ pathname: "/api/auth/login" }}
+            >
               Sign in
             </Link>
-            <Link className="btn btn-dark" href="/api/auth/register">
+            <Link
+              prefetch={false}
+              className="btn btn-dark"
+              href={{ pathname: "/api/auth/register" }}
+            >
               Sign up
             </Link>
           </div>
@@ -36,22 +57,7 @@ export const LoggedOut = () => {
           </div>
         </div>
       </main>
-
-      <footer className="footer">
-        <div className="container">
-          <strong className="text-heading-2">KindeAuth</strong>
-          <p className="footer-tagline text-body-3">
-            Visit our{" "}
-            <Link className="link" href="https://kinde.com/docs">
-              help center
-            </Link>
-          </p>
-
-          <small className="text-subtle">
-            © 2022 KindeAuth, Inc. All rights reserved
-          </small>
-        </div>
-      </footer>
+      <Footer />
     </>
   );
-};
+}

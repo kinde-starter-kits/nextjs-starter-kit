@@ -1,22 +1,23 @@
 {
-  "name": "nextjs-starter-kit",
-  "version": "0.2.0",
-  "license": "MIT",
+  "name": "next13-starter-kit",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next dev",
+    "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
-    "@kinde-oss/kinde-auth-nextjs": "^1.8.1",
-    "next": "^13.0.0",
+    "@kinde-oss/kinde-auth-nextjs": "^1.8.2",
+    "@types/node": "20.1.7",
+    "@types/react": "18.2.6",
+    "@types/react-dom": "18.2.4",
+    "eslint": "8.40.0",
+    "eslint-config-next": "13.4.2",
+    "next": "13.4.2",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
-  },
-  "devDependencies": {
-    "eslint": "8.16.0",
-    "eslint-config-next": "12.1.6"
+    "react-dom": "18.2.0",
+    "typescript": "5.0.4"
   }
 }
