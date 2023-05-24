@@ -19,7 +19,7 @@ export default function Header() {
         <div className="profile-blob">
           <div className="avatar">
             {user?.given_name?.[0]}
-            {user?.family_name?.[1]}
+            {user?.family_name?.[0]}
           </div>
           <div>
             <p className="text-heading-2">
