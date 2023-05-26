@@ -20,20 +20,12 @@ export default function Home() {
         <nav className="nav container">
           <h1 className="text-display-3">KindeAuth</h1>
           <div>
-            <Link
-              prefetch={false}
-              className="btn btn-ghost sign-in-btn"
-              href={{ pathname: "/api/auth/login" }}
-            >
+            <a className="btn btn-ghost sign-in-btn" href="/api/auth/login">
               Sign in
-            </Link>
-            <Link
-              prefetch={false}
-              className="btn btn-dark"
-              href={{ pathname: "/api/auth/register" }}
-            >
+            </a>
+            <a className="btn btn-dark" href="/api/auth/login">
               Sign up
-            </Link>
+            </a>
           </div>
         </nav>
       </header>

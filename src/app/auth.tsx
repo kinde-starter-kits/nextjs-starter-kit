@@ -17,5 +17,5 @@ export default function Auth({ children }) {
     }
   }, [isAuthenticated, isLoading, router, pathname]);
 
-  return <>{children}</>;
+  return <>{isLoading ? <p>Loading...</p> : children}</>;
 }
