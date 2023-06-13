@@ -25,7 +25,7 @@ export default function Home() {
               Sign in
             </a>
             {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
-            <a className="btn btn-dark" href="/api/auth/login">
+            <a className="btn btn-dark" href="/api/auth/register">
               Sign up
             </a>
           </div>
