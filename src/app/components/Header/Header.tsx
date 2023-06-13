@@ -1,11 +1,9 @@
 "use client";
 import { useEffect } from "react";
 import { useKindeAuth } from "@kinde-oss/kinde-auth-nextjs";
-import Link from "next/link";
 
 export default function Header() {
-  const { user, getToken, getUserOrganizations, isAuthenticated } =
-    useKindeAuth();
+  const { user, getToken, getUserOrganizations, isAuthenticated } = useKindeAuth();
   useEffect(() => {
     if (isAuthenticated) {
       console.log(getUserOrganizations());
@@ -25,12 +23,10 @@ export default function Header() {
             <p className="text-heading-2">
               {user?.given_name} {user?.family_name}
             </p>
-            <Link
-              className="text-subtle"
-              href={{ pathname: "/api/auth/logout" }}
-            >
+            {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
+            <a className="text-subtle" href="/api/auth/logout">
               Sign out
-            </Link>
+            </a>
           </div>
         </div>
       </nav>

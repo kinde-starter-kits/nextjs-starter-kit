@@ -20,10 +20,12 @@ export default function Home() {
         <nav className="nav container">
           <h1 className="text-display-3">KindeAuth</h1>
           <div>
+            {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
             <a className="btn btn-ghost sign-in-btn" href="/api/auth/login">
               Sign in
             </a>
-            <a className="btn btn-dark" href="/api/auth/login">
+            {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
+            <a className="btn btn-dark" href="/api/auth/register">
               Sign up
             </a>
           </div>
@@ -34,7 +36,7 @@ export default function Home() {
         <div className="container">
           <div className="card hero">
             <p className="text-display-1 hero-title">
-              Let's start authenticating <br /> with KindeAuth
+              Let’s start authenticating <br /> with KindeAuth
             </p>
             <p className="text-body-1 hero-tagline">Configure your app</p>
 
