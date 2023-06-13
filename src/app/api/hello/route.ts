@@ -6,6 +6,8 @@
 // export async function DELETE(Request) {}
 //  A simple GET Example
 
-export async function GET(Request) {
+import { NextRequest } from "next/server";
+
+export async function GET(Reques: NextRequest) {
   return new Response("This is a new API route");
 }
