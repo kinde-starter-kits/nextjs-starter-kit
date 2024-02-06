@@ -1,2 +1,2 @@
-import { handleAuth } from "@kinde-oss/kinde-auth-nextjs";
+import {handleAuth} from "@kinde-oss/kinde-auth-nextjs/server";
 export default handleAuth();

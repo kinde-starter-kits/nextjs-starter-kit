@@ -1,5 +1,6 @@
 "use client";
-import { useKindeAuth } from "@kinde-oss/kinde-auth-nextjs";
+import { useKindeAuth, } from "@kinde-oss/kinde-auth-nextjs";
+import {RegisterLink, LoginLink} from "@kinde-oss/kinde-auth-nextjs/components";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import Footer from "./components/Footer/Footer";
@@ -7,7 +8,7 @@ import Footer from "./components/Footer/Footer";
 export default function Home() {
   const router = useRouter();
   const pathname = usePathname();
-  const { isLoading, isAuthenticated, user, getToken } = useKindeAuth();
+  const { isLoading, isAuthenticated } = useKindeAuth();
 
   if (!isLoading && !isAuthenticated && pathname != "/") {
     console.log("sending home");
@@ -20,14 +21,8 @@ export default function Home() {
         <nav className="nav container">
           <h1 className="text-display-3">KindeAuth</h1>
           <div>
-            {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
-            <a className="btn btn-ghost sign-in-btn" href="/api/auth/login">
-              Sign in
-            </a>
-            {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
-            <a className="btn btn-dark" href="/api/auth/register">
-              Sign up
-            </a>
+            <LoginLink className="btn btn-ghost sign-in-btn">Sign in</LoginLink>
+            <RegisterLink className="btn btn-dark">Sign up</RegisterLink>
           </div>
         </nav>
       </header>
